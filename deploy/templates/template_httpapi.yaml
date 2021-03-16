@@ -1,0 +1,122 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Zombi Server SAM Service
+  
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 10
+    Runtime: nodejs12.x
+
+Parameters:
+  ZombiDBUser:
+    Description: 'Required. The Database username'
+    Type: 'String'
+  ZombiDBPass:
+    Description: 'Required. The Database password'
+    Type: 'String'
+  ZombiDBHost:
+    Description: 'Required. The Database hostname'
+    Type: 'String'
+  ZombiDBPort:
+    Description: 'Required. The Database port'
+    Type: 'String'
+  ZombiDBName:
+    Description: 'Required. The Database name'
+    Type: 'String'
+  ZombiDBType:
+    Description: 'Required. The Database type'
+    Type: 'String'
+  ZombiDBPrefix:
+    Description: 'Required. The Database prefix'
+    Type: 'String'
+  ZombiCacheHost:
+    Description: 'Required. The Cache host'
+    Type: 'String'
+  ZombiCachePort:
+    Description: 'Required. The Cache port'
+    Type: 'String'
+  ZombiCachePass:
+    Description: 'Required. The Cache password'
+    Type: 'String'
+  ZombiCacheTLS:
+    Description: 'Required. The Cache TLS'
+    Type: 'String'
+  ZombiLogLevel:
+    Description: 'Required. The level of logging'
+    Type: 'String'
+  ZombiClientEndpoint:
+    Description: 'Required. The endpoint to loopback connect'
+    Type: 'String'
+  ZombiStatsEnabled:
+    Description: 'Required. The stats enabler config option'
+    Type: 'String'
+  ZombiLogPersist:
+    Description: 'Required. Persistence of log to cache'
+    Type: 'String'
+  ZombiHideServerErrors:
+    Description: 'Required. Hide errors from users'
+    Type: 'String'
+  ZombiAuthHeaderKey:
+    Description: 'Required. Loopback connection AUTH key'
+    Type: 'String'
+  ZombiAuthHeaderValue:
+    Description: 'Required. Loopback connection AUTH value'
+    Type: 'String'
+  ZombiSessionHMACSercret:
+    Description: 'Required. Session checksum secret'
+    Type: 'String'
+  ZombiLogArguments:
+    Description: 'Required. Log arguments supplied by user'
+    Type: 'String'
+  ZombiCacheLoadScripts:
+    Description: 'Required. Loads cache script on server start'
+    Type: 'String'
+
+Resources:
+  ServerFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      FunctionName: TheBlackLambdaA
+      CodeUri: ../../server/
+      Handler: lambda.server
+      Environment: 
+        Variables:
+            ZOMBI_DB_USER: !Ref ZombiDBUser
+            ZOMBI_DB_PASS: !Ref ZombiDBPass
+            ZOMBI_DB_HOST: !Ref ZombiDBHost
+            ZOMBI_DB_PORT: !Ref ZombiDBPort
+            ZOMBI_DB_NAME: !Ref ZombiDBName
+            ZOMBI_DB_TYPE: !Ref ZombiDBType
+            ZOMBI_DB_PREFIX: !Ref ZombiDBPrefix
+            ZOMBI_CACHE_HOST: !Ref ZombiCacheHost
+            ZOMBI_CACHE_PORT: !Ref ZombiCachePort
+            ZOMBI_CACHE_PASS: !Ref ZombiCachePass
+            ZOMBI_CACHE_TLS: !Ref ZombiCacheTLS
+            ZOMBI_LOG_LEVEL: !Ref ZombiLogLevel
+            ZOMBI_CLIENT_ENDPOINT: !Ref ZombiClientEndpoint
+            ZOMBI_STATS_ENABLED: !Ref ZombiStatsEnabled
+            ZOMBI_LOG_PERSIST: !Ref ZombiLogPersist
+            ZOMBI_HIDE_SERVER_ERRORS: !Ref ZombiHideServerErrors
+            ZOMBI_AUTH_HEADER_KEY: !Ref ZombiAuthHeaderKey
+            ZOMBI_AUTH_HEADER_VALUE: !Ref ZombiAuthHeaderValue
+            ZOMBI_SESSION_HMAC_SECRET: !Ref ZombiSessionHMACSercret
+            ZOMBI_LOG_ARGUMENTS: !Ref ZombiLogArguments
+            ZOMBI_CACHE_LOAD_SCRIPTS: !Ref ZombiCacheLoadScripts
+      Events:
+        ExplicitApi:
+          Type: HttpApi
+          Properties:
+            Method: POST
+            Path: /server
+            TimeoutInMillis: 15000
+            PayloadFormatVersion: "2.0"
+            RouteSettings:
+              ThrottlingBurstLimit: 600
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-031b711c1ec6e9096
+        SubnetIds:
+          - subnet-004945b6bd6501df9
+          - subnet-09e0c4386c512a24a
+          - subnet-08ca57b6ab86f3877

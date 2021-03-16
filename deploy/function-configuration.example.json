@@ -1,0 +1,39 @@
+{
+    "FunctionName": "",
+    "Role": "",
+    "Handler": "",
+    "Description": "",
+    "Timeout": 0,
+    "MemorySize": 0,
+    "VpcConfig": {
+        "SubnetIds": [
+            ""
+        ],
+        "SecurityGroupIds": [
+            ""
+        ]
+    },
+    "Environment": {
+        "Variables": {
+            "KeyName": ""
+        }
+    },
+    "Runtime": "nodejs6.10",
+    "DeadLetterConfig": {
+        "TargetArn": ""
+    },
+    "KMSKeyArn": "",
+    "TracingConfig": {
+        "Mode": "Active"
+    },
+    "RevisionId": "",
+    "Layers": [
+        ""
+    ],
+    "FileSystemConfigs": [
+        {
+            "Arn": "",
+            "LocalMountPath": ""
+        }
+    ]
+}

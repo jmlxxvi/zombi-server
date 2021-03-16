@@ -1,0 +1,8 @@
+node_modules/
+*.test.js
+server/api/system/shared/
+server/api/smartium/
+server/api/smartiumadmin/
+server/app/smartium.js
+server/app/smartium/
+server/app/smartiumadmin/

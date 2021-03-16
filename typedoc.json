@@ -1,0 +1,4 @@
+{
+    "entryPoints": ["source/lambda.ts"],
+    "out": "docs"
+  }

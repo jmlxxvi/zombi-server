@@ -1,0 +1,10 @@
+include: 
+  - project: 'telecom-argentina/coo/fintech/devops/pipelines'
+    ref: master
+    file:
+    - '/lambda/.test.yaml'
+    - '/lambda/.build&deploy.yaml'
+
+stages:
+  - test&lint
+  - build&deploy

@@ -1,0 +1,46 @@
+{
+	"name": "zombi-server",
+	"version": "8.0.0",
+	"description": "This is the Zombi Server application",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jmlxxvi/zombi-server.git"
+	},
+	"scripts": {
+		"test": "mocha tests/unit/",
+		"lint": "eslint server/**/*.js",
+		"audit": "npm audit --registry=https://registry.npmjs.org"
+	},
+	"keywords": [
+		"backend",
+		"RPC",
+		"JSON",
+		"JSON-RPC",
+		"REST"
+	],
+	"contributors": [
+		{
+			"name": "Juan Martín Guillén",
+			"email": "juanmartinguillen@gmail.com"
+		}
+	],
+	"license": "MIT",
+	"dependencies": {
+		"@amplitude/node": "^1.2.0",
+		"ajv": "^6.11.0",
+		"aws-sdk": "^2.761.0",
+		"axios": "^0.21.1",
+		"bcryptjs": "^2.4.3",
+		"chalk": "^3.0.0",
+		"glob": "^7.1.6",
+		"jsonwebtoken": "^8.5.1",
+		"jwk-to-pem": "^2.0.4",
+		"kafkajs": "^1.15.0",
+		"luxon": "^1.25.0",
+		"mysql": "^2.18.1",
+		"nodemailer": "^6.4.15",
+		"pg": "^7.12.1",
+		"redis": "^3.0.2",
+		"uuid": "^8.3.1"
+	}
+}

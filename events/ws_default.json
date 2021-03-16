@@ -1,0 +1,33 @@
+{
+    "requestContext":{
+       "routeKey":"$default",
+       "messageId":"VMJmgdS-IAMCLvg=",
+       "eventType":"MESSAGE",
+       "extendedRequestId":"VMJmgHl0IAMFwrg=",
+       "requestTime":"29/Oct/2020:20:15:50 +0000",
+       "messageDirection":"IN",
+       "stage":"dev",
+       "connectedAt":1604002483418,
+       "requestTimeEpoch":1604002550378,
+       "identity":{
+          "cognitoIdentityPoolId":null,
+          "cognitoIdentityId":null,
+          "principalOrgId":null,
+          "cognitoAuthenticationType":null,
+          "userArn":null,
+          "userAgent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0",
+          "accountId":null,
+          "caller":null,
+          "sourceIp":"190.16.105.200",
+          "accessKey":null,
+          "cognitoAuthenticationProvider":null,
+          "user":null
+       },
+       "requestId":"VMJmgHl0IAMFwrg=",
+       "domainName":"xf876pom77.execute-api.us-east-1.amazonaws.com",
+       "connectionId":"VMJcDel-oAMCLvg=",
+       "apiId":"xf876pom77"
+    },
+    "body":"Rock it with HTML5 WebSocket XXXXXXXXXXXXXXXX",
+    "isBase64Encoded":false
+ }

@@ -1,0 +1,108 @@
+{
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Cache-Control": "no-cache",
+        "Host": "xf876pom77.execute-api.us-east-1.amazonaws.com",
+        "Origin": "http://websocket.org",
+        "Pragma": "no-cache",
+        "Sec-WebSocket-Extensions": "permessage-deflate",
+        "Sec-WebSocket-Key": "o3zpI9Dwxi5WV54koc15kg==",
+        "Sec-WebSocket-Version": "13",
+        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0",
+        "X-Amzn-Trace-Id": "Root=1-5f9b22b3-181d9f8c4c5250b15fbcc4e8",
+        "X-Forwarded-For": "190.16.105.200",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "Accept-Language": [
+            "en-US,en;q=0.5"
+        ],
+        "Cache-Control": [
+            "no-cache"
+        ],
+        "Host": [
+            "xf876pom77.execute-api.us-east-1.amazonaws.com"
+        ],
+        "Origin": [
+            "http://websocket.org"
+        ],
+        "Pragma": [
+            "no-cache"
+        ],
+        "Sec-WebSocket-Extensions": [
+            "permessage-deflate"
+        ],
+        "Sec-WebSocket-Key": [
+            "o3zpI9Dwxi5WV54koc15kg=="
+        ],
+        "Sec-WebSocket-Version": [
+            "13"
+        ],
+        "User-Agent": [
+            "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0"
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-5f9b22b3-181d9f8c4c5250b15fbcc4e8"
+        ],
+        "X-Forwarded-For": [
+            "190.16.105.200"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": {
+        "encoding": "text",
+        "token": "VWVWVWEWEREGHWERJEJSHWGHERTQWEHTRHWRTHWRTR344573776376372722"
+    },
+    "multiValueQueryStringParameters": {
+        "encoding": [
+            "text"
+        ],
+        "token": [
+            "VWVWVWEWEREGHWERJEJSHWGHERTQWEHTRHWRTHWRTR344573776376372722"
+        ]
+    },
+    "requestContext": {
+        "routeKey": "$connect",
+        "messageId": null,
+        "eventType": "CONNECT",
+        "extendedRequestId": "VMJcDHmMoAMF68w=",
+        "requestTime": "29/Oct/2020:20:14:43 +0000",
+        "messageDirection": "IN",
+        "stage": "dev",
+        "connectedAt": 1604002483418,
+        "requestTimeEpoch": 1604002483419,
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "cognitoIdentityId": null,
+            "principalOrgId": null,
+            "cognitoAuthenticationType": null,
+            "userArn": null,
+            "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0",
+            "accountId": null,
+            "caller": null,
+            "sourceIp": "190.16.105.200",
+            "accessKey": null,
+            "cognitoAuthenticationProvider": null,
+            "user": null
+        },
+        "requestId": "VMJcDHmMoAMF68w=",
+        "domainName": "xf876pom77.execute-api.us-east-1.amazonaws.com",
+        "connectionId": "VMJcDel-oAMCLvg=",
+        "apiId": "xf876pom77"
+    },
+    "isBase64Encoded": false
+}
